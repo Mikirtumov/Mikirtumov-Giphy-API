@@ -26,8 +26,8 @@ var gifs = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
                 newGif.attr("data-still",still);
                 newGif.attr("data-animated",animated);
                 newGif.addClass("my-gifs");
-                myDiv.append(paragraph, newGif);
-                $("#images").append(myDiv);
+                myDiv.prepend(paragraph, newGif);
+                $("#images").prepend(myDiv);
                 
                 
                 console.log(apiResult[i]);
