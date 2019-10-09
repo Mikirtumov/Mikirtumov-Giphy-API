@@ -7,7 +7,7 @@ var gifs = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
 
         var gifs = $(this).attr("data-name");
         
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gifs +"&api_key=uCuE13gVSqSNvnCZWnJZt1QOGAmyrhfR&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifs +"&api_key=uCuE13gVSqSNvnCZWnJZt1QOGAmyrhfR&limit=10";
         
         $.ajax({
           url: queryURL,
@@ -29,14 +29,9 @@ var gifs = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
                 myDiv.prepend(paragraph, newGif);
                 $("#images").prepend(myDiv);
                 
-                
-                console.log(apiResult[i]);
             }
-        
-
         });
       }
-
 
       function renderButtons() {
         $("#buttons-view").empty();
@@ -51,7 +46,6 @@ var gifs = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
         }
       }
 
-     
       $("#add-gif").on("click", function(event) {
         event.preventDefault();
         var gif = $("#gif-input").val().trim();
